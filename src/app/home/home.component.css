@@ -1,0 +1,26 @@
+.chip {
+  margin: 5px;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  height: 26px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 20px;
+  vertical-align: middle;
+  text-decoration: none;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-shadow: 0 2px 1px -1px #d3d3d3;
+}

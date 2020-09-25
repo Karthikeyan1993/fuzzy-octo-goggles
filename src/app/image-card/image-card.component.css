@@ -1,0 +1,13 @@
+.card {
+  border: none !important;
+  background-color: #222230 !important;
+}
+
+.card-title {
+  cursor: pointer;
+}
+
+.fa-heart {
+  color: #ff006a;
+  font-size: 16px;
+}

@@ -1,0 +1,11 @@
+<div class="card h-100 x">
+  <img [src]="feed.Image" class="card-img-top" alt="..." height="250">
+  <div class="card-body">
+    <h5 class="card-title" (click)="doLike();" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)">
+      <span [ngClass]="hclass" class="fa fa-heart" aria-hidden="true"></span>
+      <span class="pl-1 small user-select-none">{{feed.likes}}</span>
+    </h5>
+    <p class="card-text user-select-none"><span class="fa fa-clock-o pr-1"></span>Last updated {{feed.timestamp | date}}
+    </p>
+  </div>
+</div>

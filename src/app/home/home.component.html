@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div class="chip user-select-none" (click)="doOrder('likes')">
+      <span>Likes</span>
+      <span [ngClass]="getClass('likes')" class="pl-2 fa sort-icon"></span>
+    </div>
+    <div class="chip user-select-none" (click)="doOrder('timestamp')">
+      <span>Time</span>
+      <span [ngClass]="getClass('timestamp')" class="pl-2 fa sort-icon"></span>
+    </div>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-4 mt-1">
+  <div class="col mb-4" *ngFor="let feed of instaFeeds | dataSort:orderBy:prop;">
+    <app-image-card [feed]="feed"></app-image-card>
+  </div>
+</div>
