@@ -9,6 +9,8 @@ import { ImageCardComponent } from './image-card/image-card.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataSortPipe } from './data-sort.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,13 @@ import { DataSortPipe } from './data-sort.pipe';
     HomeComponent,
     ImageCardComponent,
     PageNotFoundComponent,
-    DataSortPipe
+    DataSortPipe,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

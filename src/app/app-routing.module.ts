@@ -14,9 +14,14 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'lazy',
+    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule)
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
   },
+
 ];
 
 @NgModule({
